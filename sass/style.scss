@@ -1,0 +1,52 @@
+/*!
+* Theme Name: Monica Granados Theme
+* Theme URI: http://jennyngo.io;
+* Description: Custom Theme built for monicagranados.com.
+* Version: 1.0
+* Author: Jenny Ngo
+* Author URI: http://jennyngo.io
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'headers';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: #333;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.full {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
