@@ -1,13 +1,13 @@
 <?php
 /*
-Template Name: Research Post
-Template Post Type: research_post, section
+Template Name: Open Science Post
+Template Post Type: opensci_post, section
 */
 ?>
 <?php $onePageQuery = new WP_Query(
 array(
         'posts_per_page' => 1000,
-        'post_type' => 'research_post',
+        'post_type' => 'opensci_post',
         'order' => 'DESC'
     )
 ); 
@@ -23,11 +23,9 @@ array(
             $third_img_1 = get_field('third_image_1');
             $third_img_2 = get_field('third_image_2');
             $third_img_3 = get_field('third_image_3');
-            $post_link = get_post_permalink();
-                print_r($post_link);
         ?>
 
-        <article class="research-post"id="<?php echo $post->post_name; ?>">
+        <article id="<?php echo $post->post_name; ?>">
             <h2><?php the_title(); ?></h2>
             <?php the_content('Read more'); ?>
             <?php if ($half_img_1 && $half_img_2) : ?>
@@ -53,6 +51,7 @@ array(
                     </div>
                 </div>
             <?php endif; ?>
+
         </article>
     <?php endwhile; ?>
 

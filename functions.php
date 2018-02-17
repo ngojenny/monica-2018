@@ -140,8 +140,14 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <a href="'. get_permalink() . '">Continue Reading</a>';
 }
+
+
+function modify_read_more_link() {
+    return '<a class="btn btn-light more-link" href="' . get_permalink() . '">Read More</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and hackeryou_continue_reading_link().

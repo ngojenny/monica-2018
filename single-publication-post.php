@@ -6,9 +6,9 @@ Template Post Type: pub_post, section
 ?>
 <?php $onePageQuery = new WP_Query(
 array(
-        'posts_per_page' => 1,
-        'post_type' => 'pub_post',
-        'order' => 'ASC'
+        'posts_per_page' => 1000,
+        'post_type' => 'publication_post',
+        'order' => 'DESC'
     )
 ); 
 ?>
@@ -22,10 +22,15 @@ array(
 
         <article id="<?php echo $post->post_name; ?>">
             <figure>
+                <img src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
                 <div class="overlay">
                     <p><?php the_title(); ?></p>
                 </div>
             </figure>
+            <div class="article-info">
+                <p><?php the_field('authors') ?></p>
+                <p><?php the_field('journal_issue_page_number'); ?></p>
+            </div>
             <?php the_content(); ?>
         </article>
     <?php endwhile; ?>
