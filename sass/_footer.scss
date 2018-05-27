@@ -1,3 +1,23 @@
 footer {
 	clear: both;
+	padding: 15px 0;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	ul.menu {
+		padding: 0;
+		li:last-of-type a{
+			padding-right: 0;
+		}
+		a {
+			color: $primary-color;
+			font-size: 1.9rem;
+			transition: color 0.25s;
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
 }

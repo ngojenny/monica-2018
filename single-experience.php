@@ -4,7 +4,13 @@ Template Name: Experience Section
 Template Post Type: experience, section
 */
 ?>
-<section id="experience">
+<?php 
+    $cta_text = get_field('experience_btn_text'); 
+    $cta_file = get_field('experience_file');
+    $cta_filepath = $cta_file['url'];
+?>
+
+<section id="experience" class="experience">
     <div class="wrapper">
         <?php $title = get_field('experience_main_title')?>
         <h2>
@@ -41,7 +47,7 @@ Template Post Type: experience, section
                             <p class="date"><?php the_field('experience_date')?></p>
                         </div>
                         <div class="experience-desc">
-                            <p><?php the_field('experience_description')?></p>
+                            <p><?php the_content()?></p>
                         </div>
                     </li>
                 <?php endwhile; ?>
@@ -52,6 +58,10 @@ Template Post Type: experience, section
                 
             <?php endif; ?>
         </ul>
-        <a href="#"></a>
+        <?php if( $cta_file ) : ?>
+            <a class="btn btn-outline btn-outline-light btn-resume" href="<?php echo $cta_filepath ?>" download><?php echo $cta_text ?><i class="fas fa-download"></i>
+
+</a>
+        <?php endif; ?>
     </div>
 </section>

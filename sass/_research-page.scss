@@ -1,0 +1,30 @@
+.research-page {
+	article {
+		margin-bottom: 70px;
+		position: relative;
+	}
+
+	.btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	.flex-container {
+		justify-content: space-between;
+	}
+	.gallery-half {
+		width: calc(50% - 5px);
+		margin: 5px 0;
+	}
+
+	.gallery-third {
+		width: calc(33.3% - 5px);
+		margin: 5px 0;
+	}
+}

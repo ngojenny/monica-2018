@@ -1,9 +1,49 @@
 // FULL HEADER STYLES
+header {
+	padding: 20px 0;
+}
+
+header,
+header .container {
+	text-align: center;
+	min-height: 40vh;
+}
+
+header .hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+.banner {
+	margin-bottom: 70px;
+	.hero-text {
+		position: static;
+		transform: initial;
+	}
+}
+
 .hero {
 	background-size: cover;
 	background-position: center;
-	height: 100vh;
+	min-height: 100vh;
 	color: white;
-	text-align: center;
 	position: relative;
+		h2 {
+			text-transform: none;
+			letter-spacing: 0;
+		    font-size: 2.5rem;
+		    color: $secondary-color;
+		    font-weight: 400;
+		    &:after {
+		    	display: none;
+		    }
+		}
+}
+
+.page-icon {
+	width: 45px;
+	margin: 30px 0;
 }

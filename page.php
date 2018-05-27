@@ -1,8 +1,19 @@
 <?php get_header();  ?>
-
-<div class="banner" style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?> )">
-  <h1><?php the_title(); ?></h1>
-</div>
+<!-- <header class="banner" style="background-image:url(<?php// the_post_thumbnail_url( 'full' ); ?> )"> -->
+<header class="banner">
+  <nav class="secondary-page-nav">
+    <?php wp_nav_menu( array(
+      'container' => false,
+      'theme_location' => 'primary'
+    )); ?>
+  </nav>
+  <div class="wrapper clearfix">
+    <div class="hero-text">
+      <img class="page-icon" src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
+      <h1><?php the_title(); ?></h1>
+    </div>
+  </div>
+</header>
 <main>
   <div class="wrapper">
     <?php // Start the loop ?>
@@ -11,9 +22,8 @@
       $post_name = $post_object -> post_name;
       $post_id = $post_object -> ID;
       // printing the id to use, remove this after dev
-      print_r($post_id);
+      //print_r($post_id);
     ?>
-
 
     <?php if ( have_posts() && ($post_id !== 5 && $post_id !== 30) ) while ( have_posts() ) : the_post(); ?>
       <h2><?php the_title(); ?></h2>

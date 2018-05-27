@@ -8,28 +8,33 @@
 */
 
 @import 'normalize';
+@import 'variables';
 @import 'typography';
 @import 'navigation';
 @import 'headers';
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import 'home';
+@import 'research-page';
+@import 'publications-page';
 /*
 ====================================
 Default Styling
 ====================================
 */
+body {
+	color: #333;
+}
 
 img {
 	max-width: 100%;
 }
 
-body {
-	color: #333;
-}
-
-.container {
-	max-width: 1200px;
+.container,
+.wrapper {
+	width: 80%;
+	max-width: 1020px;
 	margin: 0 auto;
 }
 
@@ -43,9 +48,9 @@ body {
 	width: 100%;
 }
 
-
-
-
+.flex-container {
+	display: flex;
+}
 
 
 

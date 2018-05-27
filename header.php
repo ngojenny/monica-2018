@@ -8,18 +8,10 @@
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700|Oswald:400,500" rel="stylesheet">
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <!-- stylesheets should be enqueued in functions.php -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <?php wp_head(); ?>
 </head>
 
 
 <body <?php body_class(); ?>>
-
-<header>
-  <div class="container">
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
-  </div> <!-- /.container -->
-</header><!--/.header-->
 

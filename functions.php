@@ -145,7 +145,7 @@ function hackeryou_continue_reading_link() {
 
 
 function modify_read_more_link() {
-    return '<a class="btn btn-light more-link" href="' . get_permalink() . '">Read More</a>';
+    return '<a class="btn btn-dark more-link" href="' . get_permalink() . '">Read More</a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
@@ -288,3 +288,4 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+

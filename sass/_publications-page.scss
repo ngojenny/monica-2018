@@ -1,0 +1,56 @@
+.publications-page {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 40px;
+	margin-bottom: 70px;
+	article {
+		width: calc(33.3% - 15px);
+	}
+
+	figure {
+		position: relative;
+		&:hover {
+			p {
+				bottom: 10px;
+			}
+		}
+	}
+
+	img {
+		display: block;
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		background: transparentize($primary-color, 0.3);
+		p {
+			position: relative;
+			bottom: 0;
+			margin: auto;
+			color: white;
+			text-transform: uppercase;
+			padding: 15px 5px;
+			text-align: center;
+			width: 75%;
+			border-top: 2px solid $third-color;
+			border-bottom: 2px solid $third-color;
+			transition: bottom 0.5s;
+		}
+	}
+
+	.article-info {
+		margin: 10px 0 30px;
+		p {
+			margin: 0;
+		}
+		a {
+			color: $primary-color;
+		}
+	}
+}

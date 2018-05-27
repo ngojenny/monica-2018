@@ -9,7 +9,8 @@ a {
 /* paragraphs */
 
 p {
-	line-height: 1.5;
+	line-height: 1.6;
+	font-weight: 400;
 }
 
 /*blockquotes*/
@@ -94,4 +95,95 @@ img {
 	width: 100%;
 	float: left;
 	clear: both;
+}
+
+/*
+====================================
+Typography & Global Button styles
+====================================
+*/
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $primary-font;
+	color: $primary-color;
+	font-size: 1.6rem;
+}
+
+h1 {
+	font-family: $secondary-font;
+	font-size: 5rem;
+	font-weight: 500;
+	letter-spacing: 3px;
+	margin: 20px 0;
+	position: relative;
+}
+
+h1:after {
+	content:"";
+	height: 3px;
+	width: 60px;
+	background: $accent-color; 
+	position: absolute;
+	top: 110%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+h2 {
+	font-family: $primary-font;
+	font-size: 3rem;
+	position: relative;
+	margin-bottom: 30px;
+	margin-top: 0;
+	font-weight: 400;
+	letter-spacing: 3px;
+	&:after {
+		content:"";
+		height: 3px;
+		width: 60px;
+		background: $accent-color; 
+		position: absolute;
+		left: 0;
+		top: 100%;
+		margin: 12px 0;
+	}
+}
+
+h1,
+h2,
+.btn {
+	text-transform: uppercase;
+}
+
+.btn {
+	display: inline-block;
+	border: 3px solid $primary-color;
+	color: $primary-color;
+	padding: 5px 15px;
+	transition: background 0.25s, color 0.25s;
+	&:hover {
+		background: $primary-color;
+		color: $third-color;
+	}
+}
+
+.btn-light {
+	border: 3px solid $third-color;
+	color: $third-color;
+	&:hover {
+		background: $third-color;
+		color: $primary-color;
+	}
+}
+
+
+.btn-accent {
+	border: 3px solid $accent-color;
+	color: $accent-color;
+	&:hover {
+		background: $accent-color;
+	}
 }

@@ -21,8 +21,8 @@ array(
             $show_secondary = get_field('show_secondary_info');
         ?>
 
-        <section id="<?php echo $post->post_name; ?>">
-            <div class="wrapper">
+        <section id="<?php echo $post->post_name; ?>" class="<?php echo $post->post_name; ?>">
+            <div class="wrapper flex-container">
                 <div class="left">
                     <img src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="<?php echo $alt_text ?>">
                 </div>

@@ -20,15 +20,16 @@ array(
         <?php 
             $img_id = get_post_thumbnail_id(get_the_ID());
             $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true);
+            //print_r(the_post_thumbnail_url());
         ?>
 
-        <section id="<?php echo $post->post_name; ?>" style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?> )">
+        <section id="<?php echo $post->post_name; ?>" style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?> )" class="open-sci">
             <div class="wrapper">
                 <h2><?php the_title(); ?></h2>
                 <?php the_content(); ?>
                 <?php 
                     if( $cta_text ) { ?>
-                        <a class="btn btn-outline btn-outline-light" href="<?php echo $cta_link ?>"><?php echo $cta_text ?></a>
+                        <a class="btn btn-outline btn-light" href="<?php echo $cta_link ?>"><?php echo $cta_text ?></a>
                     <?php }  ?>
             </div>
         </section>
