@@ -22,7 +22,7 @@ array(
             $alt_text = get_post_meta($img_id , '_wp_attachment_image_alt', true);
         ?>
 
-        <section id="<?php echo $post->post_name; ?>" style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?> )" class="contact">
+        <section id="contact" style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?> )" class="contact">
             <div class="wrapper">
                 <h2><?php the_title(); ?></h2>
                 <div class="contact-info">

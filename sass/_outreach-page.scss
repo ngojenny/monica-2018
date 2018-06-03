@@ -1,0 +1,18 @@
+.outreach-page {
+	margin-top: 50px;
+	margin-bottom: 70px;
+	article {
+		justify-content: space-between;
+		margin-bottom: 50px;
+		align-items: flex-start;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.left {
+		width: 45%;
+	}
+	.right {
+		width: 50%;
+	}
+}

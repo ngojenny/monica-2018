@@ -8,8 +8,8 @@ Template Post Type: research_post, opensci_post
 <?php get_header(); ?>
 
 <main>
-  <div class="wrapper">
-    <div class="content">
+  <div class="wrapper clearfix single-container-research-open-sci">
+    <div class="content clearfix">
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         <?php 
             $img_id = get_post_thumbnail_id(get_the_ID());
@@ -20,9 +20,7 @@ Template Post Type: research_post, opensci_post
             $third_img_2 = get_field('third_image_2');
             $third_img_3 = get_field('third_image_3');
             $post_link = get_post_permalink();
-                print_r($post_link);
         ?>
-
         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="entry-title"><?php the_title(); ?></h1>
 
@@ -66,7 +64,7 @@ Template Post Type: research_post, opensci_post
             <?php endif; ?>
 
       <?php endwhile; // end of the loop. ?>
-      <a id="go-back" class="btn btn-light" href="#">Back</a>
+      <a id="go-back" class="btn btn-light" href="#"><i class="fas fa-chevron-left"></i>Go back</a>
     </div> <!-- /.content -->
 
 

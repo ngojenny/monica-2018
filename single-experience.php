@@ -23,6 +23,10 @@ Template Post Type: experience, section
             ?>
             
         </h2>
+        <?php if( $cta_file ) : ?>
+            <a class="btn btn-outline btn-outline-light btn-resume" href="<?php echo $cta_filepath ?>" download><?php echo $cta_text ?><i class="fas fa-download"></i>
+            </a>
+        <?php endif; ?>
         <ul class="timeline">
             <?php $onePageQuery = new WP_Query(
             array(
@@ -58,10 +62,6 @@ Template Post Type: experience, section
                 
             <?php endif; ?>
         </ul>
-        <?php if( $cta_file ) : ?>
-            <a class="btn btn-outline btn-outline-light btn-resume" href="<?php echo $cta_filepath ?>" download><?php echo $cta_text ?><i class="fas fa-download"></i>
-
-</a>
-        <?php endif; ?>
+        
     </div>
 </section>

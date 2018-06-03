@@ -18,6 +18,9 @@ footer {
 			&:hover {
 				color: $accent-color;
 			}
+			&::after {
+				display: none;
+			}
 		}
 	}
 }

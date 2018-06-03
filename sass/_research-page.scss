@@ -1,4 +1,6 @@
-.research-page {
+.research-page,
+.opensci-page,
+.single-container-research-open-sci {
 	article {
 		margin-bottom: 70px;
 		position: relative;
@@ -12,7 +14,6 @@
 
 	img {
 		display: block;
-		width: 100%;
 	}
 
 	.flex-container {
@@ -21,10 +22,44 @@
 	.gallery-half {
 		width: calc(50% - 5px);
 		margin: 5px 0;
+		img {
+			width: 100%;
+		}
 	}
 
 	.gallery-third {
 		width: calc(33.3% - 5px);
 		margin: 5px 0;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.single-container-research-open-sci {
+	display: flex;
+	h1 {
+		margin: 30px 0 50px;
+		&::after {
+			display: none;
+		}
+	}
+	.content {
+		margin: auto;
+	}
+	.btn {
+		position: static;
+	}
+}
+
+#go-back {
+	color: $primary-color;
+	float: right;
+	margin-top: 30px;
+	border: none;
+	padding-right: 0;
+	svg {
+		margin-right: 10px;
+		font-size: 1.2rem;
 	}
 }

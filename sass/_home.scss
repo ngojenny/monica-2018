@@ -256,3 +256,116 @@ section.contact {
 		}
 	}
 }
+
+.side-scroll-buttons {
+	position: fixed;
+	left: 30px;
+	z-index: 10;
+	top: 30px;
+	display: none;
+	a {
+		padding: 5px;
+		display: flex;
+		opacity: 0.3;
+		color: transparent;
+		&::after {
+			content: "";
+			margin: auto;
+			width: 8px;
+			height: 8px;
+			display: block;
+			background: $secondary-color;
+			border-radius: 50%;
+		}
+	}
+	.active {
+		opacity: 0.9;
+	}
+}
+
+@media(max-width: 1080px) {
+	section.experience {
+		.experience-info {
+			width: 30%;
+		}
+		.experience-desc {
+			width: 62%;
+		}
+	}
+}
+
+@media(max-width: 780px) {
+	.flex-container {
+		flex-wrap: wrap;
+	}
+	section.about {
+		.right {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+
+	section.experience {
+		.experience-info {
+			width: 40%;
+		}
+		.experience-desc {
+			width: 52%;
+		}
+
+		.btn {
+			position: static;
+			margin-top: 20px;
+		}
+	}
+
+	section.contact {
+		.wrapper {
+			flex-wrap: wrap;
+		}
+		.contact-form-container,
+		.contact-info {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+}
+
+@media(max-width: 650px) {
+	section.about {
+		.left {
+			width: 100%;
+		}
+	}
+	section.experience {
+		li {
+			flex-wrap: wrap;
+		}
+		.experience-info,
+		.experience-desc {
+			width: 100%;
+		}
+		.experience-info {
+			border: none;
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	section.research {
+		padding-bottom: 250px;
+		.wrapper {
+			flex-wrap: wrap;
+		}
+		.left {
+			width: 100%;
+		}
+		.right {
+			width: 100%;
+			top: initial;
+			bottom: 0;
+			height: 200px;
+		}
+	}
+}

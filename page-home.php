@@ -6,13 +6,16 @@
 
 get_header();  ?>
 
-<header class="hero" style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?> )">
-  <nav>
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
-  </nav>
+<header id="home-top" class="hero" style="background-image:url(<?php the_post_thumbnail_url( 'full' ); ?> )">
+  <div>
+    <nav class="main-menu">
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'primary'
+      )); ?>
+    </nav>
+    <i class="fas fa-bars hidden-desktop"></i>
+  </div>
   <div class="container">
     <?php 
     	$post_object = get_field('btn-hot-link'); 
@@ -37,3 +40,13 @@ get_header();  ?>
 </main>
 
 <?php get_footer(); ?>
+
+<div class="side-scroll-buttons">
+  <a href="#home-top"></a>
+  <a href="#about"></a>
+  <a href="#experience"></a>
+  <a href="#research"></a>
+  <a href="#publications"></a>
+  <a href="#open-science"></a>
+  <a href="#contact"></a>
+</div>
