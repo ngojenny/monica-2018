@@ -54,3 +54,19 @@
 		}
 	}
 }
+
+@media(max-width: 880px) {
+	.publications-page {
+		article {
+			width: calc(50% - 15px);
+		}
+	}
+}
+
+@media(max-width: 600px) {
+	.publications-page {
+		article {
+			width: 100%;
+		}
+	}
+}

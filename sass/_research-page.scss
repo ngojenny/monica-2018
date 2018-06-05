@@ -14,6 +14,7 @@
 
 	img {
 		display: block;
+		height: auto;
 	}
 
 	.flex-container {
@@ -61,5 +62,40 @@
 	svg {
 		margin-right: 10px;
 		font-size: 1.2rem;
+	}
+}
+
+@media(max-width: 780px) {
+	.research-page,
+	.opensci-page,
+	.single-container-research-open-sci {
+		article {
+			margin-bottom: 85px;
+		}
+		.btn {
+			top: 100%;
+			margin-top: 15px;
+		}
+	}
+}
+
+@media(max-width: 550px) {
+	.research-page,
+	.opensci-page,
+	.single-container-research-open-sci {
+		.gallery-third {
+			width: calc(50% - 5px);
+		}
+	}
+}
+
+@media(max-width: 440px) {
+	.research-page,
+	.opensci-page,
+	.single-container-research-open-sci {
+		.gallery-third,
+		.gallery-half {
+			width: 100%;
+		}
 	}
 }

@@ -111,7 +111,7 @@ section.experience {
 		position: absolute;
 		top: 0;
 		right: 0;
-		svg {
+		i {
 			margin-left: 5px;
 		}
 	}
@@ -205,8 +205,9 @@ section.contact {
 			}
 		}
 		a {
+			transition: color 0.25s;
 			font-size: 2.2rem;
-			&:hover svg {
+			&:hover {
 				color: $accent-color;
 			}
 		}
@@ -367,5 +368,15 @@ section.contact {
 			bottom: 0;
 			height: 200px;
 		}
+	}
+}
+
+@media(max-width: 575px) {
+	section.contact input[type=text] {
+		width: 100%;
+		margin-right: 0;
+	}
+	.contact-info p:nth-of-type(2) {
+		font-size: 1.5rem;
 	}
 }
