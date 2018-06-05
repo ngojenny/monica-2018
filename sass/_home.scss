@@ -205,10 +205,10 @@ section.contact {
 			}
 		}
 		a {
-			transition: color 0.25s;
+			transition: opacity 0.25s;
 			font-size: 2.2rem;
 			&:hover {
-				color: $accent-color;
+				opacity: 0.6;
 			}
 		}
 	}
