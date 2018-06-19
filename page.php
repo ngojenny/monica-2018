@@ -37,7 +37,7 @@
       <h2>Let's connect</h2>
       <section class="contact contact-page">
         <div class="contact-form-container">
-          <form class="contact-form" action="https://formspree.io/<?php the_field('primary_action_value')?>" method="POST">
+          <form class="contact-form" action="https://formspree.io/<?php the_field('primary_action_value', 84)?>" method="POST">
               <label class="visuallyhidden" for="firstname">First name</label>
               <input type="text" name="firstname" id="firstname" placeholder="first name" required>
               <label class="visuallyhidden" for="lastname">Last name</label>

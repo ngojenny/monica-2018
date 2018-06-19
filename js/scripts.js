@@ -1,10 +1,10 @@
 $(function(){
-	$('#go-back').on('click', function(e){
+	$('#go-back').on('click touchstart', function(e){
 		e.preventDefault();
 		window.history.back();
 	});
 
-	$(document).on('click','.fa-bars',function(){
+	$(document).on('click touchstart','.fa-bars',function(){
 		$('.menu').toggleClass('responsive-nav');
 	});
 
@@ -16,7 +16,7 @@ $(function(){
 		$('.menu').removeClass('responsive-nav');
 	}
 
-	$('.side-scroll-buttons a[href^="#"]').on('click', function(event) {
+	$('.side-scroll-buttons a[href^="#"]').on('click touchstart', function(event) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
         event.preventDefault();
@@ -27,14 +27,13 @@ $(function(){
 	});
 
 	if($('.side-scroll-buttons').length) {
-		var headerHeight = $('header').height().top;
+		var headerHeight = $('header').height();
 		var aboutPosition = $('#about').position().top;
 		var experiencePosition = $('#experience').position().top;
 		var researchPosition = $('#research').position().top;
 		var publicationsPosition = $('#publications').position().top;
 		var openSciencePosition = $('#open-science').position().top;
 		var contactPosition = $('#contact').position().top;
-
 		$(document).scroll(function() {
 			var y = $(this).scrollTop();
 			if (y > headerHeight) {
