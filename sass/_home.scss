@@ -58,6 +58,21 @@ section.experience {
 				}
 			}
 		}
+
+		&:last-of-type {
+			.experience-info {
+				&::after {
+					content: "";
+					background: #282727;
+					position: absolute;
+					width: 11px;
+					height: 11px;
+					border-radius: 50%;
+					left: calc(100% - 4px);
+					bottom: 0;
+				}
+			}
+		}
 	}
 
 	.experience-info {
@@ -82,7 +97,6 @@ section.experience {
 			top: 12px;
 			z-index: 10;
 		}
-
 	}
 
 	.title {
