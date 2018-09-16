@@ -70,6 +70,9 @@ section.experience {
 					border-radius: 50%;
 					left: calc(100% - 4px);
 					bottom: 0;
+					@media(max-width:650px) {
+						display: none
+					}
 				}
 			}
 		}
