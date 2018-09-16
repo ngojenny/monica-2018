@@ -13,7 +13,18 @@
   <i class="fa fa-bars hidden-desktop" aria-hidden="true"></i>
   <div class="wrapper clearfix">
     <div class="hero-text">
-      <img class="page-icon" src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
+      <?php 
+        $post_object = get_post(); 
+        $post_name = $post_object -> post_name;
+        $post_id = $post_object -> ID;
+        // printing the id to use, remove this after dev
+        //print_r($post_id);
+      ?>
+      <?php if($post_id === 9): ?>
+        <img class="page-icon page-icon-landscape" src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
+      <?php else: ?>
+        <img class="page-icon" src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
+      <?php endif; ?>
       <h1><?php the_title(); ?></h1>
     </div>
   </div>
@@ -29,10 +40,16 @@
       //print_r($post_id);
     ?>
 
-    <?php if ( have_posts() && ($post_id !== 5 && $post_id !== 30) ) while ( have_posts() ) : the_post(); ?>
+    <?php if ( have_posts() && ($post_id !== 5) ) while ( have_posts() ) : the_post(); ?>
     <?php if($post_id !== 32): ?>
+      <?php // conditional in conditional ?>
+      <?php if($post_id === 7 || $post_id === 9 || $post_id === 30): ?>
+        <h2 class="hide-item"><?php the_title(); ?></h2>
+      <?php else: ?>
         <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
+      <?php endif; ?>
+      
+      <?php the_content(); ?>
       <?php else: ?>
       <h2>Let's connect</h2>
       <section class="contact contact-page">
